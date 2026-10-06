@@ -71,6 +71,7 @@
     locked = false;
     document.getElementById("progress-label").textContent = `السؤال ${index + 1} من ${deck.length}`;
     document.getElementById("topic-label").textContent = labels[question.topic];
+    document.getElementById("progress").setAttribute("aria-valuemax", String(deck.length));
     document.getElementById("progress").setAttribute("aria-valuenow", String(index + 1));
     document.getElementById("progress-bar").style.width = `${((index + 1) / deck.length) * 100}%`;
     document.getElementById("stem").textContent = question.stem;
